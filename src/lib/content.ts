@@ -47,7 +47,7 @@ export type TeamMember = {
   role: string;
   detail?: string;
   email?: string;
-  photo: string;
+  photo?: string;
 };
 
 import sneha from "@/assets/wix/sneha.jpg";
@@ -95,7 +95,7 @@ export const alumni: TeamMember[] = [
   { name: "Snigdha Surapaneni", role: "Previous General President", photo: snigdha },
   { name: "Zoe Wang", role: "Previous General President", photo: zoe },
   { name: "Gavin Pilger", role: "Former Student Board", photo: gavin },
-  { name: "Molly Perignat", role: "Former Student Board", photo: gavin },
+  { name: "Molly Perignat", role: "Former Student Board" },
   { name: "Harper Teilhet", role: "Previous Vice President of Activities", photo: harper },
   { name: "Taylor Hart", role: "Previous Vice President of Education", photo: taylor },
   { name: "Aambal Ganapathy", role: "Previous Vice President of Communications", photo: aambal },
