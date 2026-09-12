@@ -29,12 +29,21 @@ function MemberCard({ member, delay = 0 }: { member: TeamMember; delay?: number 
   return (
     <Reveal delay={delay}>
       <article className="h-full rounded-2xl border border-border bg-card p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-        <img
-          src={member.photo}
-          alt={`Portrait of ${member.name}`}
-          loading="lazy"
-          className="mx-auto mb-4 h-24 w-24 rounded-full border-4 border-mist object-cover"
-        />
+        {member.photo ? (
+          <img
+            src={member.photo}
+            alt={`Portrait of ${member.name}`}
+            loading="lazy"
+            className="mx-auto mb-4 h-24 w-24 rounded-full border-4 border-mist object-cover"
+          />
+        ) : (
+          <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full border-4 border-mist bg-mist font-display text-2xl font-extrabold text-ocean">
+            {member.name
+              .split(" ")
+              .map((part) => part[0])
+              .join("")}
+          </div>
+        )}
         <h3 className="font-bold text-ink">{member.name}</h3>
         <p className="mt-0.5 text-sm font-semibold text-ocean">{member.role}</p>
         {member.detail && <p className="mt-1 text-sm text-subtle">{member.detail}</p>}
