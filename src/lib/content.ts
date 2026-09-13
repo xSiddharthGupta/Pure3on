@@ -53,7 +53,7 @@ export type TeamMember = {
 import sneha from "@/assets/wix/sneha.jpg";
 import arnav from "@/assets/wix/arnav.jpg";
 import siddharth from "@/assets/wix/siddharth.jpg";
-import dirgh from "@/assets/wix/dirgh.jpeg";
+import dirghAsset from "@/assets/wix/dirgh-kikani.jpg.asset.json";
 import amy from "@/assets/wix/amy.png";
 import janya from "@/assets/wix/janya.jpg";
 import naren from "@/assets/wix/naren.jpeg";
@@ -72,7 +72,7 @@ export const studentBoard: TeamMember[] = [
   { name: "Sneha Gupta", role: "General Co-President", detail: "Senior at Walton High School", photo: sneha },
   { name: "Arnav Patil", role: "General Co-President", detail: "Senior at Walton High School", photo: arnav },
   { name: "Siddharth Gupta", role: "Vice President of Outreach", detail: "Senior at Walton High School", photo: siddharth },
-  { name: "Dirgh Kikani", role: "Vice President of Communications", detail: "Senior at Walton High School", photo: dirgh },
+  { name: "Dirgh Kikani", role: "Vice President of Communications", detail: "Senior at Walton High School", photo: dirghAsset.url },
   { name: "Amy Valero", role: "Vice President of Membership", detail: "Junior at Walton High School", photo: amy },
   { name: "Janya Gowda", role: "Vice President of Education", detail: "Senior at Walton High School", photo: janya },
   { name: "Naren Kumar", role: "Vice President of Events", detail: "Junior at Walton High School", photo: naren },

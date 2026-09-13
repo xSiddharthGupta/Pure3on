@@ -14,6 +14,8 @@ export const Route = createFileRoute("/")({
           "PURE3ON is a student-led non-profit equipping young minds with the knowledge, skills, and opportunities to create real environmental change. Every action counts.",
       },
       { property: "og:title", content: "PURE3ON — Engaging. Environmental. Education." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       {
         property: "og:description",
         content:

@@ -12,6 +12,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { logo, site } from "../lib/content";
+import { ThemeToggle } from "../components/ThemeToggle";
 
 function NotFoundComponent() {
   return (
@@ -143,22 +144,26 @@ function SiteHeader() {
           >
             Get Involved
           </a>
+          <ThemeToggle />
         </nav>
 
-        <button
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full text-deep hover:bg-mist md:hidden"
-          onClick={() => setMenuOpen((open) => !open)}
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={menuOpen}
-        >
-          <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-            {menuOpen ? (
-              <path strokeLinecap="round" d="M6 6l12 12M18 6L6 18" />
-            ) : (
-              <path strokeLinecap="round" d="M4 7h16M4 12h16M4 17h16" />
-            )}
-          </svg>
-        </button>
+        <div className="flex items-center gap-1 md:hidden">
+          <ThemeToggle />
+          <button
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full text-deep hover:bg-mist"
+            onClick={() => setMenuOpen((open) => !open)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+          >
+            <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              {menuOpen ? (
+                <path strokeLinecap="round" d="M6 6l12 12M18 6L6 18" />
+              ) : (
+                <path strokeLinecap="round" d="M4 7h16M4 12h16M4 17h16" />
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
       {menuOpen && (
