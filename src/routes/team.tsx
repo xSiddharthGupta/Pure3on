@@ -14,6 +14,8 @@ export const Route = createFileRoute("/team")({
           "Meet the PURE3ON student board, adult board, and alumni — dedicated young leaders and mentors driving environmental education at Walton High School and beyond.",
       },
       { property: "og:title", content: "Our Team — PURE3ON" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       {
         property: "og:description",
         content:
@@ -85,9 +87,14 @@ function TeamPage() {
             </h2>
             <p className="mt-2 text-lg text-subtle">Walton High School student leaders</p>
           </Reveal>
-          <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-6 md:grid-cols-8">
             {studentBoard.map((member, i) => (
-              <MemberCard key={member.name} member={member} delay={(i % 4) * 100} />
+              <div
+                key={member.name}
+                className={`md:col-span-2 ${i === 4 ? "md:col-start-2" : ""}`}
+              >
+                <MemberCard member={member} delay={(i % 4) * 100} />
+              </div>
             ))}
           </div>
         </div>
